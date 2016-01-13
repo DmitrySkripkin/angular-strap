@@ -1678,7 +1678,7 @@
           return i;
         };
         $select.$onMouseDown = function(evt) {
-          evt.preventDefault();
+          //evt.preventDefault();
           evt.stopPropagation();
           if (isTouch) {
             var targetEl = angular.element(evt.target);
