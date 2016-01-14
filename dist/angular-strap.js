@@ -1679,11 +1679,11 @@
         };
         $select.$onMouseDown = function(evt) {
           //evt.preventDefault();
-          evt.stopPropagation();
-          if (isTouch) {
-            var targetEl = angular.element(evt.target);
-            targetEl.triggerHandler('click');
-          }
+          //evt.stopPropagation();
+          //if (isTouch) {
+          //  var targetEl = angular.element(evt.target);
+          //  targetEl.triggerHandler('click');
+          //}
         };
         $select.$onKeyDown = function(evt) {
           if (!/(9|13|38|40)/.test(evt.keyCode)) return;
