@@ -2552,12 +2552,12 @@
           return i;
         };
         $select.$onMouseDown = function(evt) {
-          // evt.preventDefault();
-          // evt.stopPropagation();
-          // if (isTouch) {
-          //   var targetEl = angular.element(evt.target);
-          //   targetEl.triggerHandler('click');
-          // }
+          if (!isTouch) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            var targetEl = angular.element(evt.target);
+            targetEl.triggerHandler('mousedown');
+          }
         };
         $select.$onKeyDown = function(evt) {
           if (!/(9|13|38|40)/.test(evt.keyCode)) return;
